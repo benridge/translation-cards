@@ -1,6 +1,7 @@
 package org.mercycorps.translationcards.activity.addDeck;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,6 +16,7 @@ import org.robolectric.annotation.Config;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertNotNull;
 import static org.mercycorps.translationcards.util.TestAddTranslationCardActivityHelper.click;
 import static org.mercycorps.translationcards.util.TestAddTranslationCardActivityHelper.findImageView;
 import static org.mercycorps.translationcards.util.TestAddTranslationCardActivityHelper.setText;
@@ -69,4 +71,5 @@ public class EnterDeckSourceLanguageActivityTest {
         View sourceLanguagePicker = activity.findViewById(R.id.deck_source_language_picker);
         assertTrue(sourceLanguagePicker.isClickable());
     }
+
 }

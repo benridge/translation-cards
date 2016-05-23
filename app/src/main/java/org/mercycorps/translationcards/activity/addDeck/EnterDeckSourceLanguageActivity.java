@@ -4,6 +4,7 @@ package org.mercycorps.translationcards.activity.addDeck;
 import android.widget.TextView;
 
 import org.mercycorps.translationcards.R;
+import org.mercycorps.translationcards.fragment.LanguagePickerFragment;
 
 import java.util.Locale;
 
@@ -11,6 +12,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 public class EnterDeckSourceLanguageActivity extends AddDeckActivity {
+    private static final String LANGUAGE_PICKER_FRAGMENT = "LanguagePickerFragment";
     @Bind (R.id.deck_source_language_text) TextView sourceLanguageInput;
 
     @Override
@@ -36,7 +38,7 @@ public class EnterDeckSourceLanguageActivity extends AddDeckActivity {
 
     @OnClick(R.id.deck_source_language_picker)
     public void sourceLanguagePickerClicked() {
-
+        getFragmentManager().beginTransaction().add(new LanguagePickerFragment(), LANGUAGE_PICKER_FRAGMENT).commit();
     }
 
     private void updateContextWithSourceLanguage() {

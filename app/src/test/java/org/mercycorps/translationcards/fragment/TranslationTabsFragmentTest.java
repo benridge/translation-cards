@@ -51,11 +51,6 @@ public class TranslationTabsFragmentTest {
     }
 
     @Test
-    public void shouldNotBeNull() {
-        assertNotNull(translationTabsFragment);
-    }
-
-    @Test
     public void shouldInflateFragmentWithLanguagesTab() {
         assertNotNull(getFragmentView());
     }
